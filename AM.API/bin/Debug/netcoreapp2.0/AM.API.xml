@@ -1,0 +1,1107 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AM.API</name>
+    </assembly>
+    <members>
+        <member name="F:AM.API.Controllers.AssetsController._service">
+            <summary>
+            Asset Service
+            </summary>
+        </member>
+        <member name="F:AM.API.Controllers.AssetsController._mapper">
+            <summary>
+            Automapper
+            </summary>
+        </member>
+        <member name="F:AM.API.Controllers.AssetsController._appSettings">
+            <summary>
+            AppSettings
+            </summary>
+        </member>
+        <member name="M:AM.API.Controllers.AssetsController.Add(AM.API.DTOs.Assets.AddAsset)">
+            <summary>
+            Adds new Asset
+            </summary>
+            <param name="asset"></param>
+            <returns></returns>
+            <response code="200">Asset was saved.</response>
+            <response code="400">Invalid inputs.</response>
+            <response code="401">Unauthorized user.</response>
+        </member>
+        <member name="M:AM.API.Controllers.AssetsController.GetAll(AM.API.DTOs.Assets.GetAll)">
+            <summary>
+            Get all Assets
+            </summary>
+            <param name="criteria">Search criterias</param>
+            <returns></returns>
+            <response code="401">Unauthorized user.</response>
+        </member>
+        <member name="M:AM.API.Controllers.AssetsController.GetById(System.Int32)">
+            <summary>
+            Gets Asset by Id
+            </summary>
+            <param name="id">Asset Id</param>
+            <returns></returns>
+            <response code="200">Returns Asset record</response>
+            <response code="401">Unauthorized user.</response>
+        </member>
+        <member name="M:AM.API.Controllers.AssetsController.Update(System.Int32,AM.API.DTOs.Assets.UpdateAsset)">
+            <summary>
+            Updates Asset
+            </summary>
+            <param name="id">Asset Id</param>
+            <param name="asset"></param>
+            <returns></returns>
+            <response code="200">Asset record was updated.</response>
+            <response code="400">Invalid inputs.</response>
+            <response code="401">Unauthorized user.</response>
+        </member>
+        <member name="F:AM.API.Controllers.CategoriesController._service">
+            <summary>
+            Category Service
+            </summary>
+        </member>
+        <member name="F:AM.API.Controllers.CategoriesController._mapper">
+            <summary>
+            Automapper
+            </summary>
+        </member>
+        <member name="F:AM.API.Controllers.CategoriesController._appSettings">
+            <summary>
+            AppSettings
+            </summary>
+        </member>
+        <member name="M:AM.API.Controllers.CategoriesController.Add(AM.API.DTOs.Categories.AddCategory)">
+            <summary>
+            Adds new Category
+            </summary>
+            <param name="category"></param>
+            <returns></returns>
+            <response code="200">Category was saved.</response>
+            <response code="400">Invalid inputs.</response>
+            <response code="401">Unauthorized user.</response>
+        </member>
+        <member name="M:AM.API.Controllers.CategoriesController.GetAll(AM.API.DTOs.Categories.GetAll)">
+            <summary>
+            Get all Categories
+            </summary>
+            <param name="criteria">Search criterias</param>
+            <returns></returns>
+            <response code="401">Unauthorized user.</response>
+        </member>
+        <member name="M:AM.API.Controllers.CategoriesController.GetById(System.Int32)">
+            <summary>
+            Gets Category by Id
+            </summary>
+            <param name="id">Category Id</param>
+            <returns></returns>
+            <response code="200">Returns Category record</response>
+            <response code="401">Unauthorized user.</response>
+        </member>
+        <member name="M:AM.API.Controllers.CategoriesController.Update(System.Int32,AM.API.DTOs.Categories.UpdateCategory)">
+            <summary>
+            Updates Category
+            </summary>
+            <param name="id">Category Id</param>
+            <param name="category"></param>
+            <returns></returns>
+            <response code="200">Category record was updated.</response>
+            <response code="400">Invalid inputs.</response>
+            <response code="401">Unauthorized user.</response>
+        </member>
+        <member name="F:AM.API.Controllers.ManufacturersController._service">
+            <summary>
+            Manufacturer Service
+            </summary>
+        </member>
+        <member name="F:AM.API.Controllers.ManufacturersController._mapper">
+            <summary>
+            Automapper
+            </summary>
+        </member>
+        <member name="F:AM.API.Controllers.ManufacturersController._appSettings">
+            <summary>
+            AppSettings
+            </summary>
+        </member>
+        <member name="M:AM.API.Controllers.ManufacturersController.Add(AM.API.DTOs.Manufacturers.AddManufacturer)">
+            <summary>
+            Adds new Manufacturer
+            </summary>
+            <param name="manufacturer"></param>
+            <returns></returns>
+            <response code="200">Manufacturer was saved.</response>
+            <response code="400">Invalid inputs.</response>
+            <response code="401">Unauthorized user.</response>
+        </member>
+        <member name="M:AM.API.Controllers.ManufacturersController.GetAll(AM.API.DTOs.Manufacturers.GetAll)">
+            <summary>
+            Get all Manufacturers
+            </summary>
+            <param name="criteria">Search criterias</param>
+            <returns></returns>
+            <response code="401">Unauthorized user.</response>
+        </member>
+        <member name="M:AM.API.Controllers.ManufacturersController.GetById(System.Int32)">
+            <summary>
+            Gets Manufacturer by Id
+            </summary>
+            <param name="id">Manufacturer Id</param>
+            <returns></returns>
+            <response code="200">Returns Manufacturer record</response>
+            <response code="401">Unauthorized user.</response>
+        </member>
+        <member name="M:AM.API.Controllers.ManufacturersController.Update(System.Int32,AM.API.DTOs.Manufacturers.UpdateManufacturer)">
+            <summary>
+            Updates Manufacturer
+            </summary>
+            <param name="id">Manufacturer Id</param>
+            <param name="manufacturer"></param>
+            <returns></returns>
+            <response code="200">Manufacturer record was updated.</response>
+            <response code="400">Invalid inputs.</response>
+            <response code="401">Unauthorized user.</response>
+        </member>
+        <member name="F:AM.API.Controllers.ModelsController._service">
+            <summary>
+            Model Service
+            </summary>
+        </member>
+        <member name="F:AM.API.Controllers.ModelsController._mapper">
+            <summary>
+            Automapper
+            </summary>
+        </member>
+        <member name="F:AM.API.Controllers.ModelsController._appSettings">
+            <summary>
+            AppSettings
+            </summary>
+        </member>
+        <member name="M:AM.API.Controllers.ModelsController.Add(AM.API.DTOs.Models.AddModel)">
+            <summary>
+            Adds new Model
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+            <response code="200">Model was saved.</response>
+            <response code="400">Invalid inputs.</response>
+            <response code="401">Unauthorized user.</response>
+        </member>
+        <member name="M:AM.API.Controllers.ModelsController.GetAll(AM.API.DTOs.Models.GetAll)">
+            <summary>
+            Get all Models
+            </summary>
+            <param name="criteria">Search criterias</param>
+            <returns></returns>
+            <response code="401">Unauthorized user.</response>
+        </member>
+        <member name="M:AM.API.Controllers.ModelsController.GetById(System.Int32)">
+            <summary>
+            Gets Model by Id
+            </summary>
+            <param name="id">Model Id</param>
+            <returns></returns>
+            <response code="200">Returns Model record</response>
+            <response code="401">Unauthorized user.</response>
+        </member>
+        <member name="M:AM.API.Controllers.ModelsController.Update(System.Int32,AM.API.DTOs.Models.UpdateModel)">
+            <summary>
+            Updates Model
+            </summary>
+            <param name="id">Model Id</param>
+            <param name="model"></param>
+            <returns></returns>
+            <response code="200">Model record was updated.</response>
+            <response code="400">Invalid inputs.</response>
+            <response code="401">Unauthorized user.</response>
+        </member>
+        <member name="F:AM.API.Controllers.ProcessorsController._service">
+            <summary>
+            Processor Service
+            </summary>
+        </member>
+        <member name="F:AM.API.Controllers.ProcessorsController._mapper">
+            <summary>
+            Automapper
+            </summary>
+        </member>
+        <member name="F:AM.API.Controllers.ProcessorsController._appSettings">
+            <summary>
+            AppSettings
+            </summary>
+        </member>
+        <member name="M:AM.API.Controllers.ProcessorsController.Add(AM.API.DTOs.Processors.AddProcessor)">
+            <summary>
+            Adds new Processor
+            </summary>
+            <param name="processor"></param>
+            <returns></returns>
+            <response code="200">Processor was saved.</response>
+            <response code="400">Invalid inputs.</response>
+            <response code="401">Unauthorized user.</response>
+        </member>
+        <member name="M:AM.API.Controllers.ProcessorsController.GetAll(AM.API.DTOs.Processors.GetAll)">
+            <summary>
+            Get all Processors
+            </summary>
+            <param name="criteria">Search criterias</param>
+            <returns></returns>
+            <response code="401">Unauthorized user.</response>
+        </member>
+        <member name="M:AM.API.Controllers.ProcessorsController.GetById(System.Int32)">
+            <summary>
+            Gets Processor by Id
+            </summary>
+            <param name="id">Processor Id</param>
+            <returns></returns>
+            <response code="200">Returns Processor record</response>
+            <response code="401">Unauthorized user.</response>
+        </member>
+        <member name="M:AM.API.Controllers.ProcessorsController.Update(System.Int32,AM.API.DTOs.Processors.UpdateProcessor)">
+            <summary>
+            Updates Processor
+            </summary>
+            <param name="id">Processor Id</param>
+            <param name="processor"></param>
+            <returns></returns>
+            <response code="200">Processor record was updated.</response>
+            <response code="400">Invalid inputs.</response>
+            <response code="401">Unauthorized user.</response>
+        </member>
+        <member name="F:AM.API.Controllers.SizesController._hardDiskSizeService">
+            <summary>
+            HardDiskSize Service
+            </summary>
+        </member>
+        <member name="F:AM.API.Controllers.SizesController._memorySizeService">
+            <summary>
+            MemorySize Service
+            </summary>
+        </member>
+        <member name="F:AM.API.Controllers.SizesController._videoCardSizeService">
+            <summary>
+            VideoCardSize Service
+            </summary>
+        </member>
+        <member name="F:AM.API.Controllers.SizesController._mapper">
+            <summary>
+            Automapper
+            </summary>
+        </member>
+        <member name="F:AM.API.Controllers.SizesController._appSettings">
+            <summary>
+            AppSettings
+            </summary>
+        </member>
+        <member name="M:AM.API.Controllers.SizesController.AddHardDisk(AM.API.DTOs.Sizes.HardDisk.AddHardDisk)">
+            <summary>
+            Adds new Hard Disk Size
+            </summary>
+            <param name="hardDiskSize"></param>
+            <returns></returns>
+            <response code="200">Hard Disk Size was saved.</response>
+            <response code="400">Invalid inputs.</response>
+            <response code="401">Unauthorized user.</response>
+        </member>
+        <member name="M:AM.API.Controllers.SizesController.GetAllHardDrives(AM.API.DTOs.Sizes.HardDisk.GetAll)">
+            <summary>
+            Get all Hard Disk Sizes
+            </summary>
+            <param name="criteria">Search criterias</param>
+            <returns></returns>
+            <response code="401">Unauthorized user.</response>
+        </member>
+        <member name="M:AM.API.Controllers.SizesController.GetHardDiskById(System.Int32)">
+            <summary>
+            Gets Hard Disk Size by Id
+            </summary>
+            <param name="id">Hard Disk Size Id</param>
+            <returns></returns>
+            <response code="200">Returns Hard Disk Size record</response>
+            <response code="401">Unauthorized user.</response>
+        </member>
+        <member name="M:AM.API.Controllers.SizesController.UpdateHardDisk(System.Int32,AM.API.DTOs.Sizes.HardDisk.UpdateHardDisk)">
+            <summary>
+            Updates Hard Disk Size
+            </summary>
+            <param name="id">Hard Disk Size Id</param>
+            <param name="hardDiskSize"></param>
+            <returns></returns>
+            <response code="200">Hard Disk Size record was updated.</response>
+            <response code="400">Invalid inputs.</response>
+            <response code="401">Unauthorized user.</response>
+        </member>
+        <member name="M:AM.API.Controllers.SizesController.AddMemory(AM.API.DTOs.Sizes.Memory.AddMemory)">
+            <summary>
+            Adds new Memory Size
+            </summary>
+            <param name="memorySize"></param>
+            <returns></returns>
+            <response code="200">Memory Size was saved.</response>
+            <response code="400">Invalid inputs.</response>
+            <response code="401">Unauthorized user.</response>
+        </member>
+        <member name="M:AM.API.Controllers.SizesController.GetAllMemory(AM.API.DTOs.Sizes.Memory.GetAll)">
+            <summary>
+            Get all Memory Sizes
+            </summary>
+            <param name="criteria">Search criterias</param>
+            <returns></returns>
+            <response code="401">Unauthorized user.</response>
+        </member>
+        <member name="M:AM.API.Controllers.SizesController.GetMemoryById(System.Int32)">
+            <summary>
+            Gets Memory Size by Id
+            </summary>
+            <param name="id">Memory Size Id</param>
+            <returns></returns>
+            <response code="200">Returns Memory Size record</response>
+            <response code="401">Unauthorized user.</response>
+        </member>
+        <member name="M:AM.API.Controllers.SizesController.UpdateMemory(System.Int32,AM.API.DTOs.Sizes.Memory.UpdateMemory)">
+            <summary>
+            Updates Memory Size
+            </summary>
+            <param name="id">Memory Size Id</param>
+            <param name="memorySize"></param>
+            <returns></returns>
+            <response code="200">Memory Size record was updated.</response>
+            <response code="400">Invalid inputs.</response>
+            <response code="401">Unauthorized user.</response>
+        </member>
+        <member name="M:AM.API.Controllers.SizesController.AddVideoCard(AM.API.DTOs.Sizes.VideoCard.AddVideoCard)">
+            <summary>
+            Adds new Video Card Size
+            </summary>
+            <param name="videoCardSize"></param>
+            <returns></returns>
+            <response code="200">Video Card Size was saved.</response>
+            <response code="400">Invalid inputs.</response>
+            <response code="401">Unauthorized user.</response>
+        </member>
+        <member name="M:AM.API.Controllers.SizesController.GetAllVideoCards(AM.API.DTOs.Sizes.VideoCard.GetAll)">
+            <summary>
+            Get all Video Card Sizes
+            </summary>
+            <param name="criteria">Search criterias</param>
+            <returns></returns>
+            <response code="401">Unauthorized user.</response>
+        </member>
+        <member name="M:AM.API.Controllers.SizesController.GetVideoCardById(System.Int32)">
+            <summary>
+            Gets Video Card Size by Id
+            </summary>
+            <param name="id">Video Card Size Id</param>
+            <returns></returns>
+            <response code="200">Returns Video Card Size record</response>
+            <response code="401">Unauthorized user.</response>
+        </member>
+        <member name="M:AM.API.Controllers.SizesController.UpdateVideoCard(System.Int32,AM.API.DTOs.Sizes.VideoCard.UpdateVideoCard)">
+            <summary>
+            Updates Video Card Size
+            </summary>
+            <param name="id">Video Card Size Id</param>
+            <param name="videoCardSize"></param>
+            <returns></returns>
+            <response code="200">Video Card Size record was updated.</response>
+            <response code="400">Invalid inputs.</response>
+            <response code="401">Unauthorized user.</response>
+        </member>
+        <member name="F:AM.API.Controllers.SuppliersController._service">
+            <summary>
+            Supplier Service
+            </summary>
+        </member>
+        <member name="F:AM.API.Controllers.SuppliersController._mapper">
+            <summary>
+            Automapper
+            </summary>
+        </member>
+        <member name="F:AM.API.Controllers.SuppliersController._appSettings">
+            <summary>
+            AppSettings
+            </summary>
+        </member>
+        <member name="M:AM.API.Controllers.SuppliersController.Add(AM.API.DTOs.Suppliers.AddSupplier)">
+            <summary>
+            Adds new Supplier
+            </summary>
+            <param name="supplier"></param>
+            <returns></returns>
+            <response code="200">Supplier was saved.</response>
+            <response code="400">Invalid inputs.</response>
+            <response code="401">Unauthorized user.</response>
+        </member>
+        <member name="M:AM.API.Controllers.SuppliersController.GetAll(AM.API.DTOs.Suppliers.GetAll)">
+            <summary>
+            Get all Suppliers
+            </summary>
+            <param name="criteria">Search criterias</param>
+            <returns></returns>
+            <response code="401">Unauthorized user.</response>
+        </member>
+        <member name="M:AM.API.Controllers.SuppliersController.GetById(System.Int32)">
+            <summary>
+            Gets Supplier by Id
+            </summary>
+            <param name="id">Supplier Id</param>
+            <returns></returns>
+            <response code="200">Returns Supplier record</response>
+            <response code="401">Unauthorized user.</response>
+        </member>
+        <member name="M:AM.API.Controllers.SuppliersController.Update(System.Int32,AM.API.DTOs.Suppliers.UpdateSupplier)">
+            <summary>
+            Updates Supplier
+            </summary>
+            <param name="id">Supplier Id</param>
+            <param name="supplier"></param>
+            <returns></returns>
+            <response code="200">Supplier record was updated.</response>
+            <response code="400">Invalid inputs.</response>
+            <response code="401">Unauthorized user.</response>
+        </member>
+        <member name="M:AM.API.Controllers.TypesController.GetStatusTypes">
+            <summary>
+            Get all Status Types
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:AM.API.Controllers.UsersController._service">
+            <summary>
+            User Service
+            </summary>
+        </member>
+        <member name="F:AM.API.Controllers.UsersController._mapper">
+            <summary>
+            Automapper
+            </summary>
+        </member>
+        <member name="F:AM.API.Controllers.UsersController._appSettings">
+            <summary>
+            AppSettings
+            </summary>
+        </member>
+        <member name="M:AM.API.Controllers.UsersController.Authenticate(AM.API.DTOs.Users.AuthenticateUser)">
+            <summary>
+            Auntheticate User
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+            <response code="200">User was authorized.</response>
+            <response code="401">Unauthorized user.</response>
+        </member>
+        <member name="M:AM.API.Controllers.UsersController.Add(AM.API.DTOs.Users.AddUser)">
+            <summary>
+            Adds new User
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+            <response code="200">User was saved.</response>
+            <response code="400">Invalid inputs.</response>
+            <response code="401">Unauthorized user.</response>
+        </member>
+        <member name="M:AM.API.Controllers.UsersController.GetAll(AM.API.DTOs.Users.GetAll)">
+            <summary>
+            Get all Users
+            </summary>
+            <param name="criteria">Search criterias</param>
+            <returns></returns>
+            <response code="401">Unauthorized user.</response>
+        </member>
+        <member name="M:AM.API.Controllers.UsersController.GetById(System.Int32)">
+            <summary>
+            Gets User by Id
+            </summary>
+            <param name="id">User Id</param>
+            <returns></returns>
+            <response code="200">Returns User record</response>
+            <response code="401">Unauthorized user.</response>
+        </member>
+        <member name="M:AM.API.Controllers.UsersController.Update(System.Int32,AM.API.DTOs.Users.UpdateUser)">
+            <summary>
+            Updates User
+            </summary>
+            <param name="id">User Id</param>
+            <param name="user"></param>
+            <returns></returns>
+            <response code="200">User record was updated.</response>
+            <response code="400">Invalid inputs.</response>
+            <response code="401">Unauthorized user.</response>
+        </member>
+        <member name="P:AM.API.DTOs.Assets.AddAsset.SupplierId">
+            <summary>
+            Supplier.Id
+            </summary>
+        </member>
+        <member name="P:AM.API.DTOs.Assets.AddAsset.ModelId">
+            <summary>
+            Model.Id
+            </summary>
+        </member>
+        <member name="P:AM.API.DTOs.Assets.AddAsset.ProcessorId">
+            <summary>
+            Processor.Id
+            </summary>
+        </member>
+        <member name="P:AM.API.DTOs.Assets.AddAsset.MemoryId">
+            <summary>
+            Memory.Id
+            </summary>
+        </member>
+        <member name="P:AM.API.DTOs.Assets.AddAsset.VideoCardId">
+            <summary>
+            VideoCard.Id
+            </summary>
+        </member>
+        <member name="P:AM.API.DTOs.Assets.AddAsset.HardDiskId">
+            <summary>
+            HardDisk.Id
+            </summary>
+        </member>
+        <member name="P:AM.API.DTOs.Assets.AddAsset.ManufacturerId">
+            <summary>
+            Manufacturer.Id
+            </summary>
+        </member>
+        <member name="P:AM.API.DTOs.Assets.AddAsset.CategoryId">
+            <summary>
+            Category.Id
+            </summary>
+        </member>
+        <member name="P:AM.API.DTOs.Assets.GetAll.OrderBy">
+            <summary>
+            Define order by column
+            </summary>
+        </member>
+        <member name="P:AM.API.DTOs.Assets.GetAll.OrderType">
+            <summary>
+            Define order type (ASC or DESC)
+            </summary>
+        </member>
+        <member name="P:AM.API.DTOs.Assets.GetAll.Keyword">
+            <summary>
+            Search records by keyword. 
+            Keyword should be at least 3 characters
+            </summary>
+        </member>
+        <member name="P:AM.API.DTOs.Assets.UpdateAsset.SupplierId">
+            <summary>
+            Supplier.Id
+            </summary>
+        </member>
+        <member name="P:AM.API.DTOs.Assets.UpdateAsset.ModelId">
+            <summary>
+            Model.Id
+            </summary>
+        </member>
+        <member name="P:AM.API.DTOs.Assets.UpdateAsset.ProcessorId">
+            <summary>
+            Processor.Id
+            </summary>
+        </member>
+        <member name="P:AM.API.DTOs.Assets.UpdateAsset.MemoryId">
+            <summary>
+            Memory.Id
+            </summary>
+        </member>
+        <member name="P:AM.API.DTOs.Assets.UpdateAsset.VideoCardId">
+            <summary>
+            VideoCard.Id
+            </summary>
+        </member>
+        <member name="P:AM.API.DTOs.Assets.UpdateAsset.HardDiskId">
+            <summary>
+            HardDisk.Id
+            </summary>
+        </member>
+        <member name="P:AM.API.DTOs.Assets.UpdateAsset.ManufacturerId">
+            <summary>
+            Manufacturer.Id
+            </summary>
+        </member>
+        <member name="P:AM.API.DTOs.Assets.UpdateAsset.CategoryId">
+            <summary>
+            Category.Id
+            </summary>
+        </member>
+        <member name="P:AM.API.DTOs.BaseGetAll.CurrentPage">
+            <summary>
+            Holds current page position.
+            Default is 1.
+            </summary>
+        </member>
+        <member name="P:AM.API.DTOs.BaseGetAll.ShowAll">
+            <summary>
+            True to display all records, otherwise false.
+            </summary>
+        </member>
+        <member name="M:AM.API.Services.Assets.IAssetService.Add(AM.Core.Domain.Assets.Asset)">
+            <summary>
+            Add new Asset
+            </summary>
+            <param name="asset">Asset</param>
+            <returns></returns>
+        </member>
+        <member name="M:AM.API.Services.Assets.IAssetService.GetAll(AM.API.DTOs.Assets.GetAll,AM.API.Helpers.AppSettings)">
+            <summary>
+            Get all Assets
+            </summary>
+            <param name="criteria">Search criterias</param>
+            <param name="appSettings">AppSettings</param>
+            <returns></returns>
+        </member>
+        <member name="M:AM.API.Services.Assets.IAssetService.GetById(System.Int32)">
+            <summary>
+            Get Asset by Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AM.API.Services.Assets.IAssetService.Update(System.Int32,AM.API.DTOs.Assets.UpdateAsset,AutoMapper.IMapper)">
+            <summary>
+            Update Asset record
+            </summary>
+            <param name="id"></param>
+            <param name="asset">Asset</param>
+            <param name="mapper"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AM.API.Services.Categories.ICategoryService.Add(AM.Core.Domain.Categories.Category)">
+            <summary>
+            Add new Category
+            </summary>
+            <param name="category">Category</param>
+            <returns></returns>
+        </member>
+        <member name="M:AM.API.Services.Categories.ICategoryService.GetAll(AM.API.DTOs.Categories.GetAll,AM.API.Helpers.AppSettings)">
+            <summary>
+            Get all Categories
+            </summary>
+            <param name="criteria">Search criterias</param>
+            <param name="appSettings">AppSettings</param>
+            <returns></returns>
+        </member>
+        <member name="M:AM.API.Services.Categories.ICategoryService.GetById(System.Int32)">
+            <summary>
+            Get Category by Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AM.API.Services.Categories.ICategoryService.Update(System.Int32,AM.API.DTOs.Categories.UpdateCategory,AutoMapper.IMapper)">
+            <summary>
+            Update Category record
+            </summary>
+            <param name="id"></param>
+            <param name="category">Category</param>
+            <param name="mapper"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AM.API.Services.Manufacturers.IManufacturerService.Add(AM.Core.Domain.Manufacturers.Manufacturer)">
+            <summary>
+            Add new Manufacturer
+            </summary>
+            <param name="manufacturer">Manufacturer</param>
+            <returns></returns>
+        </member>
+        <member name="M:AM.API.Services.Manufacturers.IManufacturerService.GetAll(AM.API.DTOs.Manufacturers.GetAll,AM.API.Helpers.AppSettings)">
+            <summary>
+            Get all Manufacturers
+            </summary>
+            <param name="criteria">Search criterias</param>
+            <param name="appSettings">AppSettings</param>
+            <returns></returns>
+        </member>
+        <member name="M:AM.API.Services.Manufacturers.IManufacturerService.GetById(System.Int32)">
+            <summary>
+            Get Manufacturer by Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AM.API.Services.Manufacturers.IManufacturerService.Update(System.Int32,AM.API.DTOs.Manufacturers.UpdateManufacturer,AutoMapper.IMapper)">
+            <summary>
+            Update Manufacturer record
+            </summary>
+            <param name="id"></param>
+            <param name="manufacturer">Manufacturer</param>
+            <param name="mapper"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AM.API.Services.Models.IModelService.Add(AM.Core.Domain.Models.Model)">
+            <summary>
+            Add new Model
+            </summary>
+            <param name="model">Model</param>
+            <returns></returns>
+        </member>
+        <member name="M:AM.API.Services.Models.IModelService.GetAll(AM.API.DTOs.Models.GetAll,AM.API.Helpers.AppSettings)">
+            <summary>
+            Get all Models
+            </summary>
+            <param name="criteria">Search criterias</param>
+            <param name="appSettings">AppSettings</param>
+            <returns></returns>
+        </member>
+        <member name="M:AM.API.Services.Models.IModelService.GetById(System.Int32)">
+            <summary>
+            Get Model by Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AM.API.Services.Models.IModelService.Update(System.Int32,AM.API.DTOs.Models.UpdateModel,AutoMapper.IMapper)">
+            <summary>
+            Update Model record
+            </summary>
+            <param name="id"></param>
+            <param name="model">Model</param>
+            <param name="mapper"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AM.API.Services.Processors.IProcessorService.Add(AM.Core.Domain.Processors.Processor)">
+            <summary>
+            Add new Processor
+            </summary>
+            <param name="processor">Processor</param>
+            <returns></returns>
+        </member>
+        <member name="M:AM.API.Services.Processors.IProcessorService.GetAll(AM.API.DTOs.Processors.GetAll,AM.API.Helpers.AppSettings)">
+            <summary>
+            Get all Processors
+            </summary>
+            <param name="criteria">Search criterias</param>
+            <param name="appSettings">AppSettings</param>
+            <returns></returns>
+        </member>
+        <member name="M:AM.API.Services.Processors.IProcessorService.GetById(System.Int32)">
+            <summary>
+            Get Processor by Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AM.API.Services.Processors.IProcessorService.Update(System.Int32,AM.API.DTOs.Processors.UpdateProcessor,AutoMapper.IMapper)">
+            <summary>
+            Update Processor record
+            </summary>
+            <param name="id"></param>
+            <param name="processor">Processor</param>
+            <param name="mapper"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AM.API.Services.Sizes.IHardDiskSizeService.Add(AM.Core.Domain.Sizes.HardDisk)">
+            <summary>
+            Add new HardDisk
+            </summary>
+            <param name="hardDisk">HardDisk</param>
+            <returns></returns>
+        </member>
+        <member name="M:AM.API.Services.Sizes.IHardDiskSizeService.GetAll(AM.API.DTOs.Sizes.HardDisk.GetAll,AM.API.Helpers.AppSettings)">
+            <summary>
+            Get all HardDisks
+            </summary>
+            <param name="criteria">Search criterias</param>
+            <param name="appSettings">AppSettings</param>
+            <returns></returns>
+        </member>
+        <member name="M:AM.API.Services.Sizes.IHardDiskSizeService.GetById(System.Int32)">
+            <summary>
+            Get HardDisk by Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AM.API.Services.Sizes.IHardDiskSizeService.Update(System.Int32,AM.API.DTOs.Sizes.HardDisk.UpdateHardDisk,AutoMapper.IMapper)">
+            <summary>
+            Update HardDisk record
+            </summary>
+            <param name="id"></param>
+            <param name="hardDisk">HardDisk</param>
+            <param name="mapper"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AM.API.Services.Sizes.IMemorySizeService.Add(AM.Core.Domain.Sizes.Memory)">
+            <summary>
+            Add new Memory
+            </summary>
+            <param name="memory">Memory</param>
+            <returns></returns>
+        </member>
+        <member name="M:AM.API.Services.Sizes.IMemorySizeService.GetAll(AM.API.DTOs.Sizes.Memory.GetAll,AM.API.Helpers.AppSettings)">
+            <summary>
+            Get all Memorys
+            </summary>
+            <param name="criteria">Search criterias</param>
+            <param name="appSettings">AppSettings</param>
+            <returns></returns>
+        </member>
+        <member name="M:AM.API.Services.Sizes.IMemorySizeService.GetById(System.Int32)">
+            <summary>
+            Get Memory by Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AM.API.Services.Sizes.IMemorySizeService.Update(System.Int32,AM.API.DTOs.Sizes.Memory.UpdateMemory,AutoMapper.IMapper)">
+            <summary>
+            Update Memory record
+            </summary>
+            <param name="id"></param>
+            <param name="memory">Memory</param>
+            <param name="mapper"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AM.API.Services.Sizes.IVideoCardSizeService.Add(AM.Core.Domain.Sizes.VideoCard)">
+            <summary>
+            Add new VideoCard
+            </summary>
+            <param name="videoCard">VideoCard</param>
+            <returns></returns>
+        </member>
+        <member name="M:AM.API.Services.Sizes.IVideoCardSizeService.GetAll(AM.API.DTOs.Sizes.VideoCard.GetAll,AM.API.Helpers.AppSettings)">
+            <summary>
+            Get all VideoCards
+            </summary>
+            <param name="criteria">Search criterias</param>
+            <param name="appSettings">AppSettings</param>
+            <returns></returns>
+        </member>
+        <member name="M:AM.API.Services.Sizes.IVideoCardSizeService.GetById(System.Int32)">
+            <summary>
+            Get VideoCard by Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AM.API.Services.Sizes.IVideoCardSizeService.Update(System.Int32,AM.API.DTOs.Sizes.VideoCard.UpdateVideoCard,AutoMapper.IMapper)">
+            <summary>
+            Update VideoCard record
+            </summary>
+            <param name="id"></param>
+            <param name="videoCard">VideoCard</param>
+            <param name="mapper"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AM.API.Services.Suppliers.ISupplierService.Add(AM.Core.Domain.Suppliers.Supplier)">
+            <summary>
+            Add new Supplier
+            </summary>
+            <param name="supplier">Supplier</param>
+            <returns></returns>
+        </member>
+        <member name="M:AM.API.Services.Suppliers.ISupplierService.GetAll(AM.API.DTOs.Suppliers.GetAll,AM.API.Helpers.AppSettings)">
+            <summary>
+            Get all Suppliers
+            </summary>
+            <param name="criteria">Search criterias</param>
+            <param name="appSettings">AppSettings</param>
+            <returns></returns>
+        </member>
+        <member name="M:AM.API.Services.Suppliers.ISupplierService.GetById(System.Int32)">
+            <summary>
+            Get Supplier by Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AM.API.Services.Suppliers.ISupplierService.Update(System.Int32,AM.API.DTOs.Suppliers.UpdateSupplier,AutoMapper.IMapper)">
+            <summary>
+            Update Supplier record
+            </summary>
+            <param name="id"></param>
+            <param name="supplier">Supplier</param>
+            <param name="mapper"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AM.API.Services.Users.IUserService.Authenticate(AM.API.DTOs.Users.AuthenticateUser)">
+            <summary>
+            Authenticate User
+            </summary>
+            <param name="user">User</param>
+            <returns></returns>
+        </member>
+        <member name="M:AM.API.Services.Users.IUserService.GenerateToken(AM.Core.Domain.Users.User,AM.API.Helpers.AppSettings)">
+            <summary>
+            Generate Token
+            </summary>
+            <param name="authenticatedUser"></param>
+            <param name="appSettings"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AM.API.Services.Users.IUserService.Add(AM.Core.Domain.Users.User,System.String)">
+            <summary>
+            Add new User
+            </summary>
+            <param name="user">User</param>
+            <param name="password">User's password</param>
+            <returns></returns>
+        </member>
+        <member name="M:AM.API.Services.Users.IUserService.GetAll(AM.API.DTOs.Users.GetAll,AM.API.Helpers.AppSettings)">
+            <summary>
+            Get all Users
+            </summary>
+            <param name="criteria">Search criterias</param>
+            <param name="appSettings">AppSettings</param>
+            <returns></returns>
+        </member>
+        <member name="M:AM.API.Services.Users.IUserService.GetById(System.Int32)">
+            <summary>
+            Get User by Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AM.API.Services.Users.IUserService.Update(System.Int32,AM.API.DTOs.Users.UpdateUser,System.String,AutoMapper.IMapper)">
+            <summary>
+            Update User record
+            </summary>
+            <param name="id"></param>
+            <param name="updateUser">User</param>
+            /// <param name="password">User's new password</param>
+            <param name="mapper"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AM.API.Validators.Assets.UpdateAssetValidator.IdMustBeValid(System.Int32)">
+            <summary>
+            This is used to check if record is valid by Id.
+            </summary>
+            <param name="id">Id to be checked</param>
+            <returns>False if not valid, otherwise true.</returns>
+        </member>
+        <member name="M:AM.API.Validators.Categories.AddCategoryValidator.NotYetRegistered(System.String)">
+            <summary>
+            This is used to validate if Category's Name is already registered.
+            </summary>
+            <param name="name">Category's Name to be checked</param>
+            <returns>False if registered, otherwise True.</returns>
+        </member>
+        <member name="M:AM.API.Validators.Categories.UpdateCategoryValidator.IdMustBeValid(System.Int32)">
+            <summary>
+            This is used to check if record is valid by Id.
+            </summary>
+            <param name="id">Id to be checked</param>
+            <returns>False if not valid, otherwise true.</returns>
+        </member>
+        <member name="M:AM.API.Validators.Manufacturers.AddManufacturerValidator.NotYetRegistered(System.String)">
+            <summary>
+            This is used to validate if Manufacturer's Name is already registered.
+            </summary>
+            <param name="name">Manufacturer's Name to be checked</param>
+            <returns>False if registered, otherwise True.</returns>
+        </member>
+        <member name="M:AM.API.Validators.Manufacturers.UpdateManufacturerValidator.IdMustBeValid(System.Int32)">
+            <summary>
+            This is used to check if record is valid by Id.
+            </summary>
+            <param name="id">Id to be checked</param>
+            <returns>False if not valid, otherwise true.</returns>
+        </member>
+        <member name="M:AM.API.Validators.Models.AddModelValidator.NotYetRegistered(System.String)">
+            <summary>
+            This is used to validate if Model's Name is already registered.
+            </summary>
+            <param name="name">Model's Name to be checked</param>
+            <returns>False if registered, otherwise True.</returns>
+        </member>
+        <member name="M:AM.API.Validators.Models.UpdateModelValidator.IdMustBeValid(System.Int32)">
+            <summary>
+            This is used to check if record is valid by Id.
+            </summary>
+            <param name="id">Id to be checked</param>
+            <returns>False if not valid, otherwise true.</returns>
+        </member>
+        <member name="M:AM.API.Validators.Processors.AddProcessorValidator.NotYetRegistered(System.String)">
+            <summary>
+            This is used to validate if Processor's Name is already registered.
+            </summary>
+            <param name="name">Processor's Name to be checked</param>
+            <returns>False if registered, otherwise True.</returns>
+        </member>
+        <member name="M:AM.API.Validators.Processors.UpdateProcessorValidator.IdMustBeValid(System.Int32)">
+            <summary>
+            This is used to check if record is valid by Id.
+            </summary>
+            <param name="id">Id to be checked</param>
+            <returns>False if not valid, otherwise true.</returns>
+        </member>
+        <member name="M:AM.API.Validators.Sizes.AddHardDiskValidator.NotYetRegistered(System.String)">
+            <summary>
+            This is used to validate if HardDisk's Size is already registered.
+            </summary>
+            <param name="size">HardDisk's Size to be checked</param>
+            <returns>False if registered, otherwise True.</returns>
+        </member>
+        <member name="M:AM.API.Validators.Sizes.AddMemoryValidator.NotYetRegistered(System.String)">
+            <summary>
+            This is used to validate if Memory's Size is already registered.
+            </summary>
+            <param name="size">Memory's Size to be checked</param>
+            <returns>False if registered, otherwise True.</returns>
+        </member>
+        <member name="M:AM.API.Validators.Sizes.AddVideoCardValidator.NotYetRegistered(System.String)">
+            <summary>
+            This is used to validate if VideoCard's Size is already registered.
+            </summary>
+            <param name="size">VideoCard's Size to be checked</param>
+            <returns>False if registered, otherwise True.</returns>
+        </member>
+        <member name="M:AM.API.Validators.Sizes.UpdateHardDiskSizeValidator.IdMustBeValid(System.Int32)">
+            <summary>
+            This is used to check if record is valid by Id.
+            </summary>
+            <param name="id">Id to be checked</param>
+            <returns>False if not valid, otherwise true.</returns>
+        </member>
+        <member name="M:AM.API.Validators.Sizes.UpdateMemorySizeValidator.IdMustBeValid(System.Int32)">
+            <summary>
+            This is used to check if record is valid by Id.
+            </summary>
+            <param name="id">Id to be checked</param>
+            <returns>False if not valid, otherwise true.</returns>
+        </member>
+        <member name="M:AM.API.Validators.Sizes.UpdateVideoCardSizeValidator.IdMustBeValid(System.Int32)">
+            <summary>
+            This is used to check if record is valid by Id.
+            </summary>
+            <param name="id">Id to be checked</param>
+            <returns>False if not valid, otherwise true.</returns>
+        </member>
+        <member name="M:AM.API.Validators.Suppliers.AddSupplierValidator.NotYetRegistered(System.String)">
+            <summary>
+            This is used to validate if Supplier's Name is already registered.
+            </summary>
+            <param name="name">Supplier's Name to be checked</param>
+            <returns>False if registered, otherwise True.</returns>
+        </member>
+        <member name="M:AM.API.Validators.Suppliers.UpdateSupplierValidator.IdMustBeValid(System.Int32)">
+            <summary>
+            This is used to check if record is valid by Id.
+            </summary>
+            <param name="id">Id to be checked</param>
+            <returns>False if not valid, otherwise true.</returns>
+        </member>
+        <member name="M:AM.API.Validators.Users.AddUserValidator.NotYetRegistered(System.String)">
+            <summary>
+            This is used to validate if User's UserName is already registered.
+            </summary>
+            <param name="userName">User's UserName to be checked</param>
+            <returns>False if registered, otherwise True.</returns>
+        </member>
+        <member name="M:AM.API.Validators.Users.UpdateUserValidator.IdMustBeValid(System.Int32)">
+            <summary>
+            This is used to check if record is valid by Id.
+            </summary>
+            <param name="id">Id to be checked</param>
+            <returns>False if not valid, otherwise true.</returns>
+        </member>
+        <member name="M:AM.API.Validators.Users.UpdateUserValidator.UserNameStillAvailable(AM.API.DTOs.Users.UpdateUser)">
+            <summary>
+            This is used to check if username is not yet registered.
+            </summary>
+            <param name="model"></param>
+            <returns>False if not valid, otherwise true.</returns>
+        </member>
+    </members>
+</doc>

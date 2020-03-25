@@ -1,0 +1,18 @@
+D:\Projects\AssetsManagement\src\AM.Core\bin\Debug\netcoreapp2.0\AM.Core.deps.json
+D:\Projects\AssetsManagement\src\AM.Core\bin\Debug\netcoreapp2.0\AM.Core.dll
+D:\Projects\AssetsManagement\src\AM.Core\bin\Debug\netcoreapp2.0\AM.Core.pdb
+D:\Projects\AssetsManagement\src\AM.Core\obj\Debug\netcoreapp2.0\AM.Core.csproj.CoreCompileInputs.cache
+D:\Projects\AssetsManagement\src\AM.Core\obj\Debug\netcoreapp2.0\AM.Core.AssemblyInfoInputs.cache
+D:\Projects\AssetsManagement\src\AM.Core\obj\Debug\netcoreapp2.0\AM.Core.AssemblyInfo.cs
+D:\Projects\AssetsManagement\src\AM.Core\obj\Debug\netcoreapp2.0\AM.Core.dll
+D:\Projects\AssetsManagement\src\AM.Core\obj\Debug\netcoreapp2.0\AM.Core.pdb
+D:\Projects\AssetsManagement\src\AM.Core\obj\Debug\netcoreapp2.0\AM.Core.csprojAssemblyReference.cache
+C:\Users\JM\Downloads\asset management api\AM.Core\bin\Debug\netcoreapp2.0\AM.Core.deps.json
+C:\Users\JM\Downloads\asset management api\AM.Core\bin\Debug\netcoreapp2.0\AM.Core.dll
+C:\Users\JM\Downloads\asset management api\AM.Core\bin\Debug\netcoreapp2.0\AM.Core.pdb
+C:\Users\JM\Downloads\asset management api\AM.Core\obj\Debug\netcoreapp2.0\AM.Core.csprojAssemblyReference.cache
+C:\Users\JM\Downloads\asset management api\AM.Core\obj\Debug\netcoreapp2.0\AM.Core.csproj.CoreCompileInputs.cache
+C:\Users\JM\Downloads\asset management api\AM.Core\obj\Debug\netcoreapp2.0\AM.Core.AssemblyInfoInputs.cache
+C:\Users\JM\Downloads\asset management api\AM.Core\obj\Debug\netcoreapp2.0\AM.Core.AssemblyInfo.cs
+C:\Users\JM\Downloads\asset management api\AM.Core\obj\Debug\netcoreapp2.0\AM.Core.dll
+C:\Users\JM\Downloads\asset management api\AM.Core\obj\Debug\netcoreapp2.0\AM.Core.pdb

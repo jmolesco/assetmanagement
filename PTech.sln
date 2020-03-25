@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{1B135772-96EE-4DC0-9670-0E94F1D6E6A1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{212DBFAB-7A6E-41BA-8473-66797947F961}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AM.Core", "AM.Core\AM.Core.csproj", "{048930E3-48BB-4E60-8EBA-095DAF920A2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AM.API", "AM.API\AM.API.csproj", "{9A13EF38-C722-448D-97D4-3DCFBC04BE0E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{048930E3-48BB-4E60-8EBA-095DAF920A2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{048930E3-48BB-4E60-8EBA-095DAF920A2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{048930E3-48BB-4E60-8EBA-095DAF920A2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{048930E3-48BB-4E60-8EBA-095DAF920A2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A13EF38-C722-448D-97D4-3DCFBC04BE0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A13EF38-C722-448D-97D4-3DCFBC04BE0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A13EF38-C722-448D-97D4-3DCFBC04BE0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A13EF38-C722-448D-97D4-3DCFBC04BE0E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{048930E3-48BB-4E60-8EBA-095DAF920A2E} = {1B135772-96EE-4DC0-9670-0E94F1D6E6A1}
+		{9A13EF38-C722-448D-97D4-3DCFBC04BE0E} = {212DBFAB-7A6E-41BA-8473-66797947F961}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5F6B5817-9127-4A00-B82C-71658B1D88ED}
+	EndGlobalSection
+EndGlobal
