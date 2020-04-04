@@ -28,3 +28,18 @@ C:\Users\JM\Downloads\asset management api\AM.API\obj\Debug\netcoreapp2.0\AM.API
 C:\Users\JM\Downloads\asset management api\AM.API\obj\Debug\netcoreapp2.0\AM.API.csproj.CopyComplete
 C:\Users\JM\Downloads\asset management api\AM.API\obj\Debug\netcoreapp2.0\AM.API.dll
 C:\Users\JM\Downloads\asset management api\AM.API\obj\Debug\netcoreapp2.0\AM.API.pdb
+C:\Users\81256687\Desktop\assetmanagement\AM.API\bin\Debug\netcoreapp2.0\AM.API.xml
+C:\Users\81256687\Desktop\assetmanagement\AM.API\bin\Debug\netcoreapp2.0\AM.API.deps.json
+C:\Users\81256687\Desktop\assetmanagement\AM.API\bin\Debug\netcoreapp2.0\AM.API.runtimeconfig.json
+C:\Users\81256687\Desktop\assetmanagement\AM.API\bin\Debug\netcoreapp2.0\AM.API.runtimeconfig.dev.json
+C:\Users\81256687\Desktop\assetmanagement\AM.API\bin\Debug\netcoreapp2.0\AM.API.dll
+C:\Users\81256687\Desktop\assetmanagement\AM.API\bin\Debug\netcoreapp2.0\AM.API.pdb
+C:\Users\81256687\Desktop\assetmanagement\AM.API\bin\Debug\netcoreapp2.0\AM.Core.dll
+C:\Users\81256687\Desktop\assetmanagement\AM.API\bin\Debug\netcoreapp2.0\AM.Core.pdb
+C:\Users\81256687\Desktop\assetmanagement\AM.API\obj\Debug\netcoreapp2.0\AM.API.csprojAssemblyReference.cache
+C:\Users\81256687\Desktop\assetmanagement\AM.API\obj\Debug\netcoreapp2.0\AM.API.csproj.CoreCompileInputs.cache
+C:\Users\81256687\Desktop\assetmanagement\AM.API\obj\Debug\netcoreapp2.0\AM.API.AssemblyInfoInputs.cache
+C:\Users\81256687\Desktop\assetmanagement\AM.API\obj\Debug\netcoreapp2.0\AM.API.AssemblyInfo.cs
+C:\Users\81256687\Desktop\assetmanagement\AM.API\obj\Debug\netcoreapp2.0\AM.API.csproj.CopyComplete
+C:\Users\81256687\Desktop\assetmanagement\AM.API\obj\Debug\netcoreapp2.0\AM.API.dll
+C:\Users\81256687\Desktop\assetmanagement\AM.API\obj\Debug\netcoreapp2.0\AM.API.pdb

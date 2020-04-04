@@ -156,8 +156,44 @@ namespace AM.API.Services.Users
                                   {
                                       p.Id,
                                       p.FullName,
-                                      p.UserName
+                                      p.UserName,
+                                      p.DateCreated
                                   });
+
+
+            if (criteria.Keyword.HasValue())
+            {
+                if (criteria.SearchBy.HasValue)
+                {
+                    records = records.Where(p => p.FullName.Contains(criteria.Keyword) || p.UserName.Contains(criteria.Keyword));
+                }
+            }
+
+            if (criteria.OrderBy.HasValue)
+            {
+                if (criteria.OrderBy == 1) // ID
+                {
+                    if (criteria.OrderType == 1) // asc
+                        records = records.OrderByDescending(p => p.Id);
+                    else
+                        records = records.OrderBy(p => p.Id);
+                }
+                else // NAME
+                {
+                    if (criteria.OrderType == 1) // asc
+                        records = records.OrderByDescending(p => p.FullName);
+                    else
+                        records = records.OrderBy(p => p.FullName);
+
+                }
+            }
+            else
+            {
+                records = records.OrderByDescending(p => p.Id);
+            }
+
+
+
 
             GetAllResponse response = null;
 
@@ -176,8 +212,8 @@ namespace AM.API.Services.Users
                     return error;
                 }
 
-                records = records.Skip((criteria.CurrentPage - 1) * appSettings.RecordDisplayPerPage)
-                                    .Take(appSettings.RecordDisplayPerPage);
+                records = records.Skip((criteria.CurrentPage - 1) * appSettings.RecordDisplayPerPageUser)
+                                    .Take(appSettings.RecordDisplayPerPageUser);
             }
             else
             {
@@ -247,5 +283,23 @@ namespace AM.API.Services.Users
             }
         }
 
+        public object Delete(int id)
+        {
+            var users = _context.Users.AsNoTracking()
+                                 .Where(p => p.Id == id)
+                                 .Select(p => new User
+                                 {
+                                      Id=p.Id,
+                                      FullName=p.FullName,
+                                      UserName=p.UserName,
+                                      DateCreated=p.DateCreated
+                                 })
+                                 .FirstOrDefault();
+
+            _context.Users.Remove(users);
+            _context.SaveChanges();
+
+            return new SuccessResponse();
+        }
     }
 }

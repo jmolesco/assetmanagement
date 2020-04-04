@@ -65,8 +65,8 @@ namespace AM.API.Controllers
         /// <response code="401">Unauthorized user.</response>
         [HttpGet]
         public IActionResult GetAll(GetAll criteria)
-        {
-            var response = _service.GetAll(criteria, _appSettings);
+      {    
+           var response = _service.GetAll(criteria, _appSettings);
             return Ok(response);
         }
 

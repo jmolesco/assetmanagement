@@ -55,6 +55,6 @@ namespace AM.API.Services.Users
         /// <param name="mapper"></param>
         /// <returns></returns>
         object Update(int id, UpdateUser updateUser, string password, IMapper mapper);
-        
+        object Delete(int id);
     }
 }

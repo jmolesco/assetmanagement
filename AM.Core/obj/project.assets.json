@@ -676,23 +676,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\JM\\.nuget\\packages\\": {},
+    "C:\\Users\\81256687\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\JM\\Downloads\\asset management api\\AM.Core\\AM.Core.csproj",
+      "projectUniqueName": "C:\\Users\\81256687\\Desktop\\assetmanagement\\AM.Core\\AM.Core.csproj",
       "projectName": "AM.Core",
-      "projectPath": "C:\\Users\\JM\\Downloads\\asset management api\\AM.Core\\AM.Core.csproj",
-      "packagesPath": "C:\\Users\\JM\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\JM\\Downloads\\asset management api\\AM.Core\\obj\\",
+      "projectPath": "C:\\Users\\81256687\\Desktop\\assetmanagement\\AM.Core\\AM.Core.csproj",
+      "packagesPath": "C:\\Users\\81256687\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\81256687\\Desktop\\assetmanagement\\AM.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\JM\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\81256687\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

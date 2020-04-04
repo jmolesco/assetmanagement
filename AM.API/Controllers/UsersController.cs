@@ -120,6 +120,13 @@ namespace AM.API.Controllers
             return Ok(response);
         }
 
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            var response = _service.Delete(id);
+            return Ok(response);
+        }
+
     }
 
 }

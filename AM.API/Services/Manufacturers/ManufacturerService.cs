@@ -1,6 +1,7 @@
 ﻿using AM.API.DTOs.Manufacturers;
 using AM.API.Helpers;
 using AM.Core.Domain.Manufacturers;
+using AM.Core.Helper.Extensions;
 using AM.Core.Helper.Responses;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
@@ -36,7 +37,38 @@ namespace AM.API.Services.Manufacturers
                                       p.Name
                                   });
 
-            records = records.OrderByDescending(p => p.Id);
+            if (criteria.Keyword.HasValue())
+            {
+                if (criteria.SearchBy.HasValue)
+                {
+                    records = records.Where(p => p.Name.Contains(criteria.Keyword));
+                }
+            }
+
+            if (criteria.OrderBy.HasValue)
+            {
+                if (criteria.OrderBy == 1) // ID
+                {
+                    if (criteria.OrderType == 1) // asc
+                        records = records.OrderByDescending(p => p.Id);
+                    else
+                        records = records.OrderBy(p => p.Id);
+                }
+                else // NAME
+                {
+                    if (criteria.OrderType == 1) // asc
+                        records = records.OrderByDescending(p => p.Name);
+                    else
+                        records = records.OrderBy(p => p.Name);
+
+                }
+            }
+            else
+            {
+                records = records.OrderByDescending(p => p.Id);
+            }
+
+
 
             GetAllResponse response = null;
 

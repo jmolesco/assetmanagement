@@ -222,7 +222,7 @@ namespace AM.API.Helpers
             #endregion
 
             #region Asset
-            var assetMinRequiredRecord = 5000;
+            var assetMinRequiredRecord = 1000;
             if (context.Assets.LongCount() <= assetMinRequiredRecord)
             {
                 var service = new AssetService(context);

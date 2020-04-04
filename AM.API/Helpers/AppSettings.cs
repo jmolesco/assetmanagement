@@ -4,6 +4,7 @@
     {
 
         public int RecordDisplayPerPage { get; set; }
+        public int RecordDisplayPerPageUser { get; set; }
 
         public string Secret { get; set; }
 

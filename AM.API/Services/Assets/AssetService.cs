@@ -136,8 +136,25 @@ namespace AM.API.Services.Assets
                 }
             }
 
+
+            if (criteria.FilterBy.HasValue)
+            {
+                if (criteria.FilterBy == 1)
+                {
+                    records = records.Where(p => p.Status == StatusType.Available);
+                }
+                else if(criteria.FilterBy == 2)
+                {
+                    records = records.Where(p => p.Status == StatusType.Archive);
+                }
+                else if(criteria.FilterBy == 3)
+                {
+                    records = records.Where(p => p.Status == StatusType.Deployed);
+                }              
+            }
+
             //  Check if orderby is defined
-            if(criteria.OrderBy.HasValue)
+            if (criteria.OrderBy.HasValue)
             {
 
                 //  Order records based on the orderby & ordertype parameters 
@@ -187,6 +204,10 @@ namespace AM.API.Services.Assets
                         records = records.OrderBy(p => p.Status);
                     }
                 }
+            }
+            else
+            {
+                records = records.OrderByDescending(p => p.Id);
             }
 
             GetAllResponse response = null;
@@ -302,6 +323,33 @@ namespace AM.API.Services.Assets
                 mappedAsset.DateUpdated = DateTime.Now;
 
                 _context.Update(mappedAsset);
+                _context.SaveChanges();
+
+                return new SuccessResponse();
+            }
+
+        }
+        public object Delete(int id)
+        {
+
+            var asset = _context.Assets.AsNoTracking()
+                                       .Where(p => p.Id == id)
+                                       .FirstOrDefault();
+
+            if (asset == null)
+            {
+                var error = new ErrorResponse();
+                error.ErrorMessages.Add(MessageHelper.RecordToBeUpdatedNotFound);
+
+                return error;
+            }
+            else
+            {
+                asset.DateUpdated = DateTime.Now;
+                asset.Status = StatusType.Archive;
+                     
+
+                _context.Update(asset);
                 _context.SaveChanges();
 
                 return new SuccessResponse();

@@ -38,6 +38,6 @@ namespace AM.API.Services.Assets
         /// <param name="mapper"></param>
         /// <returns></returns>
         object Update(int id, UpdateAsset asset, IMapper mapper);
-
+        object Delete(int id);
     }
 }

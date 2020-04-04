@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Linq;
 using AM.API.DTOs.Sizes.VideoCard;
+using AM.Core.Helper.Extensions;
 
 namespace AM.API.Services.Sizes
 {
@@ -37,7 +38,36 @@ namespace AM.API.Services.Sizes
                                       p.Size
                                   });
 
-            records = records.OrderByDescending(p => p.Id);
+            if (criteria.Keyword.HasValue())
+            {
+                if (criteria.SearchBy.HasValue)
+                {
+                    records = records.Where(p => p.Size.Contains(criteria.Keyword));
+                }
+            }
+
+            if (criteria.OrderBy.HasValue)
+            {
+                if (criteria.OrderBy == 1) // ID
+                {
+                    if (criteria.OrderType == 1) // asc
+                        records = records.OrderByDescending(p => p.Id);
+                    else
+                        records = records.OrderBy(p => p.Id);
+                }
+                else // NAME
+                {
+                    if (criteria.OrderType == 1) // asc
+                        records = records.OrderByDescending(p => p.Size);
+                    else
+                        records = records.OrderBy(p => p.Size);
+
+                }
+            }
+            else
+            {
+                records = records.OrderByDescending(p => p.Id);
+            }
 
             GetAllResponse response = null;
 
