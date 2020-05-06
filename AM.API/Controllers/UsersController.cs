@@ -49,7 +49,7 @@ namespace AM.API.Controllers
         /// <response code="401">Unauthorized user.</response>
         [AllowAnonymous]
         [HttpPost("authenticate")]
-        public IActionResult Authenticate(AuthenticateUser user)
+        public IActionResult Authenticate([FromBody] AuthenticateUser user)
         {
             var authenticatedUser = _service.Authenticate(user);
             if(authenticatedUser == null)
