@@ -8,6 +8,11 @@ using System;
 
 namespace AM.API
 {
+    //"DefaultConnection": "Data Source=SQL5052.site4now.net;Initial Catalog=DB_A5715B_ptechamdb2;User Id=DB_A5715B_ptechamdb2_admin;Password=jmolesco_06;"
+    //"Server=(localdb)\\mssqllocaldb;Initial Catalog=ptech-am-db;Integrated Security=True",
+    //"DefaultConnection": "Data Source=SQL5052.site4now.net;Initial Catalog=DB_A5715B_ptechamdb2;User Id=DB_A5715B_ptechamdb2_admin;Password=jmolesco_06;"
+    //"Server=(localdb)\\mssqllocaldb;Initial Catalog=ptech-am-db;Integrated Security=True"
+    //"DefaultConnection": "Server=(localdb)\\mssqllocaldb;Initial Catalog=ptech-am-db;Integrated Security=True"
     public class Program
     {
         public static void Main(string[] args)
