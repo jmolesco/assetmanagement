@@ -16,6 +16,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc.Cors.Internal;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -35,6 +36,7 @@ namespace AM.API
             Configuration = configuration;
         }
 
+        public readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -51,7 +53,6 @@ namespace AM.API
             }).AddFluentValidation(fvc => fvc.RegisterValidatorsFromAssemblyContaining<Startup>());
 
             services.AddAutoMapper();
-
             // START: Configure DI for application services
 
             #region Dashboard
@@ -92,7 +93,6 @@ namespace AM.API
             services.AddScoped<IUserService, UserService>();
             #endregion
             //  END
-
             services.AddSwaggerGen(opt =>
             {
                 opt.SwaggerDoc("v1", new Info { Title = "Assets Management API", Version = "v1" });
@@ -124,6 +124,25 @@ namespace AM.API
                     ValidateIssuer = false,
                     ValidateAudience = false
                 };
+            });
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowSpecificOrigin",
+                builder =>
+                {
+                    builder.WithOrigins("https://assetmanagement.surge.sh/")
+                   .AllowAnyOrigin()
+                   .AllowAnyMethod()
+                   .AllowAnyHeader()
+                   .AllowCredentials();
+                });
+            });
+
+            services.AddMvc()
+            .AddMvcOptions(options =>
+            {
+                options.Filters.Add(new CorsAuthorizationFilterFactory("AllowSpecificOrigin"));
             });
         }
 
@@ -165,12 +184,7 @@ namespace AM.API
                 });
             }
 
-            
-            app.UseCors(x => x
-               .AllowAnyOrigin()
-               .AllowAnyMethod()
-               .AllowAnyHeader()
-               .AllowCredentials());
+            app.UseCors("AllowSpecificOrigin");
 
             app.UseSwagger();
 
@@ -180,6 +194,7 @@ namespace AM.API
             });
 
             app.UseAuthentication();
+            //app.UseHttpMethodOverride();
             app.UseStaticFiles();
 
             app.UseMvc();
